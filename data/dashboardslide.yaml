@@ -1,0 +1,21 @@
+- md5: c7d4c24c171058a951d68666d3456069
+  type: youtube
+  token: CsjiZD2E6h0
+  embedded: https://www.youtube.com/embed/CsjiZD2E6h0?rel=0
+  dim:
+    height: 270
+    width: 480
+- md5: ac587b5be35e50f7eb1af847a5823260
+  type: youtube
+  token: pRV-r54EW60
+  embedded: https://www.youtube.com/embed/pRV-r54EW60?rel=0
+  dim:
+    height: 270
+    width: 480
+- md5: 5f0ca55e8bba205717a78409837528ef
+  type: youtube
+  token: Kttt7itXNPA
+  embedded: https://www.youtube.com/embed/Kttt7itXNPA?rel=0
+  dim:
+    height: 270
+    width: 480

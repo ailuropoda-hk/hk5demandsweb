@@ -1,0 +1,11 @@
+extends layout
+
+block content
+  .body
+    include ./header.pug
+    .main
+      #dashboard(data-locale=locale, data-dashboardslides=dashboardslides)
+    script(src='/vendor/porto/js/theme.js')
+    script(src='/vendor/porto/js/custom.js')
+    script(src='/vendor/porto/js/theme.init.js')
+    script(type="text/babel" src="/js/web/dashboard.js")

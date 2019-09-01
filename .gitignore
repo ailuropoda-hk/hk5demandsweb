@@ -1,0 +1,7 @@
+private/
+backup/
+bower_components/
+node_modules/
+
+.env
+hk5demandsweb.img

@@ -1,0 +1,41 @@
+.custom-modal.item-player{
+  min-width: 650px;
+  width: 70%;
+  margin-top: 50px;
+}
+
+.custom-modal.item-player .modal-body {
+  min-height: 300px;
+}
+
+.custom-modal.item-player .popover {
+  max-width: 250px;
+}
+
+.custom-modal.item-player .popover .popover-content {
+  padding: 0px;
+}
+
+.custom-modal.item-player .popover .popover-title {
+  color: #777;
+  background-color: white;
+}
+
+
+.custom-modal.item-player .popover .popover-content table{
+  margin-bottom: 0px;
+}
+
+.videoWrapper {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+}
+.videoWrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}

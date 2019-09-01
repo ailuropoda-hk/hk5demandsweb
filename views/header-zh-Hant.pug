@@ -1,0 +1,61 @@
+header#header.header-narrow
+  .header-body
+    .header-container.container
+      .header-row
+        .header-column
+          .header-logo
+            a(href='/')
+              img(alt='Porto' width='50' height='50' data-sticky-width='50' data-sticky-height='50' data-sticky-top='50' src='img/logo.png')
+        .header-column
+          .header-row
+            .header-nav
+              button.btn.header-btn-collapse-nav(data-toggle='collapse' data-target='.header-nav-main')
+                i.fa.fa-bars
+              .header-nav-main.header-nav-main-effect-1.header-nav-main-sub-effect-1.collapse
+                nav
+                  - var baseq = "?locale=zh-Hant";
+                  ul#mainNav.nav.nav-pills
+                    li
+                      a(href="/") 運動因由
+                    li.dropdown
+                      a.dropdown-toggle(href="/mapevent"+baseq) 抗爭
+                      ul.dropdown-menu
+                        li.dropdown-submenu
+                          a(href="/") 集會
+                          ul.dropdown-menu
+                            li
+                              a(href="/mapevent"+baseq+"&event=818vpark") 818 維園集會
+                        li.dropdown-submenu
+                          a 遊行
+                          ul.dropdown-menu
+                            li
+                              a(href="/mapevent"+baseq+"&event=428rally") 428 遊行
+                            li
+                              a(href="/mapevent"+baseq+"&event=811tst") 811 尖沙咀遊行
+                        li.dropdown-submenu
+                          a.dropdown-submenu(href="/") 罷工
+                          ul.dropdown-menu
+                            li
+                              a(href="/mapevent"+baseq+"&event=805strike") 805 罷工
+                        li.dropdown-submenu
+                          a.dropdown-submenu(href="/") 不合作運動
+                          ul.dropdown-menu
+                            li
+                              a(href="/mapevent"+baseq+"&event=812airport") 812 機場和你塞
+                    li.dropdown
+                      a.dropdown-toggle 記者會
+                      ul.dropdown-menu
+                        li
+                         a(href="/mapevent"+baseq+"&cat=announce-lihkg") 民間記者會
+                        li
+                          a(href="/mapevent"+baseq+"&cat=announce-demo") 泛民記者會
+                        li
+                          a(href="/mapevent"+baseq+"&cat=announce-gov") 政府及建制記者會
+                        li
+                          a(href="/mapevent"+baseq+"&cat=announce-po") 警方記者會
+                    li
+                      a(href="/") 聯署
+                    li
+                      a(href="/") 聯繫我們
+
+

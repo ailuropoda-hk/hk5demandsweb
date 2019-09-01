@@ -1,0 +1,20 @@
+extends layout
+
+block content
+  .body
+    include ./header.pug
+    .main
+      #mapevent(data-locale=locale, data-visualdata=visualdata)
+    script(src='/vendor/porto/js/theme.js')
+    script(src='/vendor/porto/js/custom.js')
+    script(src='/vendor/porto/js/theme.init.js')
+    script(type="text/babel" src="/js/web/mapevent.js")
+
+
+  style.
+    .leaflet-container {
+    height: calc(100vh - 200px);
+    width: 100%;
+    margin: 0 auto;
+    z-index: 1;
+    }
