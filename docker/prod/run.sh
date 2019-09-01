@@ -2,8 +2,7 @@
 
 PROJECT_NAME=hk5demandsweb
 LAST_COMMIT=$(git rev-parse --short HEAD 2> /dev/null | sed "s/\(.*\)/\1/")
-# IMAGE_TAG=${PROJECT_NAME}:${LAST_COMMIT}
-IMAGE_TAG=${PROJECT_NAME}:001
+IMAGE_TAG=${PROJECT_NAME}:${LAST_COMMIT}
 
 cd ../..
 
