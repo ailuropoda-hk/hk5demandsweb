@@ -6,13 +6,35 @@ var dataModule = require('../modules/data')
 var commonModule = require('../modules/common')
 
 router.get('/', async function(req, res, next) {
-  let locale = req.query.locale
-  res.render('index', { locale: 'zh-Hant' , 
+  res.redirect('/zh-Hant')
+})
+
+router.get('/:locale', async function(req, res, next) {
+  let locale = commonModule.getLocale(req.params.locale)
+  res.render('index', { locale: locale , 
     dashboardslides: dataModule.dashboardslides })
 })
 
-router.get('/mapevent', async function(req, res, next) {
-  let locale = req.query.locale
+router.get('/localeredirect/:locale', async function(req, res, next) {
+  let locale = commonModule.getLocale(req.params.locale)
+  let referer = req.headers.referer 
+  let redirectlink = '/' + locale
+  if (referer != null && referer != undefined) {
+    let strary1 = referer.split('//')
+    if (strary1.length == 2) {
+      let strary2 = strary1[1].split('/')
+      if (strary2.length >= 3) {
+        let frontlen = strary2[0].length + strary2[1].length + 1
+        redirectlink = '/' + locale + strary1[1].substring(frontlen, strary1[1].length)
+      }
+    } 
+  }
+  res.redirect(redirectlink)
+})
+
+
+router.get('/:locale/mapevent', async function(req, res, next) {
+  let locale = commonModule.getLocale(req.params.locale)
   let event = ""
   let cat = ""
   if (req.query.event != undefined && req.query.event != null) {
@@ -23,7 +45,7 @@ router.get('/mapevent', async function(req, res, next) {
   }
   let url = commonModule.apiServer + "/api/visualdata?event=" + event + "&cat=" + cat
   let result = await commonModule.fetchServer(url, "GET", {})
-  res.render('mapevent', { locale: 'zh-Hant', visualdata: result.data })
+  res.render('mapevent', { locale: locale, visualdata: result.data })
 })
 
 module.exports = router;

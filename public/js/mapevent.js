@@ -77,7 +77,7 @@ class MapEvent extends React.Component{
     let articleList = []
     let visualdata = this.state.visualdata
     let lastts
-    let dir = "left"
+    let dir = "right"
     if (visualdata.length > 0) {
       lastts = visualdata[0].ts
       articleList.push(
@@ -100,13 +100,13 @@ class MapEvent extends React.Component{
 </div>
         )
         lastts = ts
-        if (dir == "left") {
-          dir = "right"
-        } else {
-          dir = "left"
-        }
-      }
 
+      }
+      if (dir == "left") {
+        dir = "right"
+      } else {
+        dir = "left"
+      }
       articleList.push(
 <article className={"timeline-box post post-small " + dir}
   onClick={this.clickEvent.bind(this, i)}>
@@ -121,12 +121,14 @@ class MapEvent extends React.Component{
   </div>
   <div className="row">
     <div className="col-md-12">
+
       <div className="post-content">
         <h6 className="heading-primary">
           {visualdata[i].title}
         </h6>
         <p>{visualdata[i].desc}</p>
       </div>
+
     </div>
   </div>
 </article>
@@ -134,11 +136,13 @@ class MapEvent extends React.Component{
     }
 
     return(
+      <div className="blog-posts">
 <section className="timeline" style={{width: "100%", marginLeft: 0}}>
   <div className="timeline-body">
     {articleList}
   </div>
 </section>
+</div>
     )
   }
 
@@ -230,6 +234,7 @@ class MapEvent extends React.Component{
 
   renderMap() {
     return (
+    // <div className="center-col" style={{height: 500}}>
       <Map center={this.state.mapCenter} zoom={this.state.zoom}>
         <TileLayer
           attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
@@ -237,6 +242,7 @@ class MapEvent extends React.Component{
         />
         {this.renderMarker()}
       </Map>
+      // </div>
     )
   }
 
@@ -259,7 +265,7 @@ class MapEvent extends React.Component{
           </div>
         </div>
         <div className="col-md-4">
-          {this.renderTimeline()}
+            {this.renderTimeline()}
         </div>
       </div>
     ) : (

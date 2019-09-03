@@ -15,30 +15,18 @@ var getLocale = function(locale) {
 
 
 fetchServer = function (url, method, bodydata) {
-  console.log("TEST")
   return new Promise((resolve, reject) => {
-    // bodydata.authenticity_token = $("meta[name='csrf-token']").attr('content')
     let fetch_func
     if (method == 'GET') {
-      console.log(url)
       fetch_func = fetch(url, {
         method: method,
         timeout: 3000,
-        // headers: {
-        //   'Content-Type': 'application/json',
-        //   'X-AUTH-TOKEN': $("meta[name='csrf-token']").attr('content')
-        // },
-        // credentials: 'same-origin'
       })
     } else {
       fetch_func = fetch(url, {
         method: method,
         timeout: 3000,
         body: JSON.stringify(bodydata),
-        // headers: {
-        //   'Content-Type': 'application/json'
-        // },
-        // credentials: 'same-origin'
       })
     }
 
