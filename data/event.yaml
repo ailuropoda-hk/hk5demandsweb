@@ -1,0 +1,58 @@
+- event: 213extradition
+  date: 2019-02-13
+  title:
+    - name: 修例開始
+      locale: zh-Hant
+  desc:
+    - name: 政府宣布修訂《逃犯條例》和《刑事事宜 相互法律協助條例》
+      locale: zh-Hant
+- event: 331rally
+  date: 2019-03-31
+  title:
+    - name: 首次反條例大遊行
+      locale: zh-Hant
+  desc:
+    - name: 民間人權陣線發起反對《逃犯條例》修訂草案的首場遊行，大會統計共有1.2萬人參與。
+      locale: zh-Hant
+- event: 428rally
+  date: 2019-04-28
+  title:
+    - name: 第二次反條例大遊行
+      locale: zh-Hant
+  desc:
+    - name: 民間人權陣線第二次發起反對修訂草案的遊行，民間人權陣線稱有13萬人參加，創下2014年雨傘革命以來的民主派遊行紀錄。
+      locale: zh-Hant
+- event: 520legco
+  date: 2019-05-20
+  title:
+    - name: 政府要求立法會6.12直接二讀
+      locale: zh-Hant
+  desc:
+    - name: 政府為求盡快通過修例，要求以建制派為主的立法會繞過法案委員會，在六月十二日直上大會審議修例。
+      locale: zh-Hant
+- event: 606lawrally
+  date: 2019-06-06
+  title:
+    - name: 法律界黑衣遊行
+      locale: zh-Hant
+  desc:
+    - name: 法律界人士發起黑衣遊行，抗議修訂草案。發起遊行的法律界立法會議員郭榮鏗表明：「法律界不會向政府低頭。」
+      locale: zh-Hant
+- event: 609rally
+  date: 2019-06-09
+  title:
+    - name: 民間人權陣線1,030,000人大遊行
+      locale: zh-Hant
+  desc:
+    - name: 民間人權陣線再度發起示威遊行，抗議修訂草案參加，參加人數達103萬人。人潮導致最少5個港鐵車站實施管制措施，其後警員與抗議者曾爆發衝突。隔日，林鄭月娥拒絕就修訂草案讓步。
+      locale: zh-Hant
+- event: 612strke
+  date: 2019-06-12
+  title:
+    - name: 全港大罷工反修例，其後警方武力清場
+      locale: zh-Hant
+  desc:
+    - name: 民間人權陣線協同眾民主派議員，發起大罷工並於立法會外集會抗議修例。立法會預定當天恢復修訂草案的二讀審議，大量示威者圍堵、佔領金鐘立法會綜合大樓周邊道路抗議，高峰時逾4萬人參與。其後引發暴力衝突，警方動用催淚彈、橡膠子彈武力清場。
+      locale: zh-Hant
+
+      

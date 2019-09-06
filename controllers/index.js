@@ -32,6 +32,31 @@ router.get('/localeredirect/:locale', async function(req, res, next) {
   res.redirect(redirectlink)
 })
 
+router.get('/:locale/event', async function(req, res, next) {
+  let locale = commonModule.getLocale(req.params.locale)
+  let event = ""
+  let cat = ""
+  if (req.query.event != undefined && req.query.event != null) {
+    event = req.query.event
+  }
+  if (req.query.cat != undefined && req.query.cat != null) {
+    cat = req.query.cat
+  }
+  let url = commonModule.apiServer + "/api/visualdata?event=" + event + "&cat=" + cat
+  let result = await commonModule.fetchServer(url, "GET", {})
+  res.setHeader('Content-Type', 'application/json');
+  res.status(200).send({ data: {locale: locale, visualdata: result.data}, status: 'success' })
+})
+
+router.get('/:locale/eventintro', async function(req, res, next) {
+  res.render('events/213extradition')
+})
+
+router.get('/:locale/gallery', async function(req, res, next) {
+  let locale = commonModule.getLocale(req.params.locale)
+  let events = dataModule.events[locale]
+  res.render('gallery', { locale: locale, events: events })
+})
 
 router.get('/:locale/mapevent', async function(req, res, next) {
   let locale = commonModule.getLocale(req.params.locale)

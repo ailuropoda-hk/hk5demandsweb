@@ -179,7 +179,7 @@ class MapEvent extends React.Component{
       {visualdata.type == "facebook-photo" ? (
         <img className="center" style={{height: height, width: width}} src={src} alt=""/>
       ) : (
-        <iframe height={height*0.95} width={width*0.95} src={src} frameborder="0"/>
+        <iframe height={height*0.95} width={width*0.95} src={src} frameBorder="0"/>
 
       )}
     </p>
