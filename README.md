@@ -21,7 +21,7 @@
 
   ```
   SERVERURL=http://localhost:8080
-#If you are running the API server on port 8080 of your localhost
+  #If you are running the API server on port 8080 of your localhost
   ```
   
 ## Run the Web Server
