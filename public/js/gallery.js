@@ -14,7 +14,7 @@ class Gallery extends React.Component{
       titleGallery = "Visual Gallery"
       titleIntro = "Summary"
     }
-    console.log("locale", this.props.locale)
+    // console.log("locale", this.props.locale)
     this.state = {
       isShowBoth: (window.innerWidth > 1000),
       visualDataIndex: 0,

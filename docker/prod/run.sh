@@ -8,4 +8,4 @@ cd ../..
 
 docker container rm $PROJECT_NAME
 docker run --name $PROJECT_NAME -v $(pwd)/data:/usr/app/hk5demandsweb/data \
-  -e SERVERURL=http://host.docker.internal:8080 -p 9091:9091 -it $IMAGE_TAG  /bin/bash
+  -e SERVERURL=https://api.hk5demands.site -p 9091:9091 -it $IMAGE_TAG  /bin/bash
