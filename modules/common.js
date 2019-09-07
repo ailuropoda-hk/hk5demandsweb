@@ -1,4 +1,5 @@
 var fetch = require('node-fetch')
+var fs = require('fs')
 var _ = require('lodash')
 
 var apiServer = process.env.SERVERURL
@@ -48,8 +49,21 @@ fetchServer = function (url, method, bodydata) {
   })
 }
 
+function fileExist(filePath) {
+  return new Promise((resolve, reject) => {
+    fs.access(filePath, fs.F_OK, (err) => {
+      if (err) {
+        return resolve(false);
+     }
+      //file exists
+      resolve(true);
+    })
+  });
+ }
+
 module.exports = {
   getLocale: getLocale,
   fetchServer: fetchServer,
-  apiServer: apiServer
+  apiServer: apiServer,
+  fileExist: fileExist,
 }

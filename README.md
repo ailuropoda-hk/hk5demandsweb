@@ -26,7 +26,9 @@
   
 ## Run the Web Server
 
-- Run `node ./bin/www`
+- Run `node ./bin/www` for production
+
+- Run `yarn nodemon` for development
 
 - Visit the web site by the URL `http://localhost:9091`
 

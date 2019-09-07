@@ -20,7 +20,7 @@ class Gallery extends React.Component{
     this.updateDimensions = this.updateDimensions.bind(this)
     this.fetchVisualData = this.fetchVisualData.bind(this)
     this.clickVisualData = this.clickVisualData.bind(this)
-
+    this.clickEvent = this.clickEvent.bind(this)
     this.renderSepScreen = this.renderSepScreen.bind(this)
     this.renderTimeline = this.renderTimeline.bind(this)
     this.renderGallery = this.renderGallery.bind(this)
@@ -52,14 +52,13 @@ class Gallery extends React.Component{
   fetchVisualData() {
     let urlPath = '/' + this.state.locale + '/event?event=' + this.state.event
     urlPath = '/' + this.state.locale + '/event'
-    console.log("URL Path: ", urlPath)
     fetchServer(urlPath, 'GET', {}).then((res) => {
       if (res.data.visualdata) {
         this.setState({visualdata: res.data.visualdata})
       } else {
         this.setState({visualdata: []})
       }
-      console.log(res)
+      // console.log(res)
     }, (err) => {
       console.log(err)
     })
@@ -73,8 +72,8 @@ class Gallery extends React.Component{
     }
   }
 
-  clickEvent() {
-    console.log("TEST")
+  clickEvent(idx) {
+    this.setState({event: this.state.events[idx].event})
   }
 
   goToScreen(screen) {
@@ -228,6 +227,7 @@ class Gallery extends React.Component{
   }
 
   renderIntro() {
+    let src = "/" + this.state.locale + "/eventintro/" + this.state.event
     return (
 <div className="row" 
   style={{ marginLeft: 35, marginTop: 14, marginRight: 35, position: "fixed"}}>
@@ -237,12 +237,13 @@ class Gallery extends React.Component{
     <li className="pull-right" onClick={this.goToScreen.bind(this, 'timeline')}><a href="#">Close</a></li>
   </ul>
   <hr/>
-  <iframe style={{width: this.state.winWidth-50, height: this.state.winHeight-220}} src="/zh-Hant/eventintro" frameBorder="0"/>
+  <iframe style={{width: this.state.winWidth-50, height: this.state.winHeight-220}} src={src} frameBorder="0"/>
 </div>
     )
   }
 
   renderSepScreen() {
+    let src = "/" + this.state.locale + "/eventintro/" + this.state.event
     return (
 <div className="row">
   <div className="container col-md-6" style={{height: this.state.winHeight}}>
@@ -254,7 +255,7 @@ class Gallery extends React.Component{
           <li onClick={this.goToScreen.bind(this, 'gallery')}><a href="#">Visual Gallery</a></li>
         </ul>
         <hr/>
-        <iframe style={{width: this.state.winWidth/2-50, height: this.state.winHeight-220}} src="/zh-Hant/eventintro" frameBorder="0"/>
+        <iframe style={{width: this.state.winWidth/2-50, height: this.state.winHeight-220}} src={src} frameBorder="0"/>
       </div>
     </div>
   </div>
