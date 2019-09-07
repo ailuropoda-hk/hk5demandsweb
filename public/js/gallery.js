@@ -2,17 +2,33 @@ class Gallery extends React.Component{
   constructor(props) {
     super(props)
     let events = JSON.parse(props.events)
+    let titleClose = "關閉"
+    let titleGallery = "影像資料庫"
+    let titleIntro = "簡介"
+    if (this.props.locale == "zh-Hans") {
+      titleClose = "关闭"
+      titleGallery = "影像资料库"
+      titleIntro = "简介"
+    } else if (this.props.locale == "en") {
+      titleClose = "Close"
+      titleGallery = "Visual Gallery"
+      titleIntro = "Summary"
+    }
+    console.log("locale", this.props.locale)
     this.state = {
       isShowBoth: (window.innerWidth > 1000),
       visualDataIndex: 0,
       visualdata: [],
       isShowGallery: false,
       isShowVisualData: false,
-      isShowIntro: true,
+      isShowIntro: (window.innerWidth > 1000),
       renderMode: 'sepscreen',
       events: events,
       event: events[0].event,
       locale: props.locale,
+      titleClose: titleClose,
+      titleGallery: titleGallery,
+      titleIntro: titleIntro,
       winHeight: window.innerHeight,
       winWidth: window.innerWidth,
     }
@@ -73,7 +89,8 @@ class Gallery extends React.Component{
   }
 
   clickEvent(idx) {
-    this.setState({event: this.state.events[idx].event})
+    this.setState({event: this.state.events[idx].event}, 
+      this.goToScreen('intro'))
   }
 
   goToScreen(screen) {
@@ -95,6 +112,13 @@ class Gallery extends React.Component{
 
   renderGallery() {
     let galleryList = []
+    let containerStyle
+    if (this.state.isShowBoth) {
+      containerStyle = { marginLeft: 35, marginTop: 14, marginRight: 35, marginBottom: 35 }
+    } else {
+      containerStyle = { marginLeft: 5, marginTop: 14, marginRight: 5}
+    }
+    
     for (let i=0; i<this.state.visualdata.length; i++) {
       let item = this.state.visualdata[i]
       galleryList.push(
@@ -112,11 +136,11 @@ class Gallery extends React.Component{
 
     return (
 <div className="row" 
-  style={{ marginLeft: 35, marginTop: 14, marginRight: 35, marginBottom: 35}}>
+  style={containerStyle}>
   <ul className="nav nav-pills">
-    <li onClick={this.goToScreen.bind(this, 'intro')}><a href="#">Introduction</a></li>
-    <li className="active" ><a href="#">Visual Gallery</a></li>
-    <li className="pull-right" onClick={this.goToScreen.bind(this, 'timeline')}><a href="#">Close</a></li>
+    <li onClick={this.goToScreen.bind(this, 'intro')}><a href="#">{this.state.titleIntro}</a></li>
+    <li className="active" ><a href="#">{this.state.titleGallery}</a></li>
+    <li className="pull-right" onClick={this.goToScreen.bind(this, 'timeline')}><a href="#">{this.state.titleClose}</a></li>
   </ul>
   <hr/>
   {galleryList}
@@ -204,7 +228,7 @@ class Gallery extends React.Component{
     { (idx > 0) && (
       <li className="active" onClick={this.clickVisualData.bind(this, idx-1)}><a href="#">{this.state.visualdata[idx-1].title}</a></li>
     )}
-    <li className="pull-right" onClick={this.goToScreen.bind(this, 'gallery')}><a href="#">Close</a></li>
+    <li className="pull-right" onClick={this.goToScreen.bind(this, 'gallery')}><a href="#">{this.state.titleClose}</a></li>
     { (idx < this.state.visualdata.length - 1) && (
       <li className="active pull-right"  onClick={this.clickVisualData.bind(this, idx+1)}><a href="#">{this.state.visualdata[idx+1].title}</a></li>
     )}
@@ -227,17 +251,26 @@ class Gallery extends React.Component{
   }
 
   renderIntro() {
+    let containerStyle
+    let iframeStyle
+    if (this.state.isShowBoth) {
+      containerStyle = { marginLeft: 35, marginTop: 14, marginRight: 35, position: "fixed"}
+      iframeStyle = {width: this.state.winWidth-50, height: this.state.winHeight-220}
+    } else {
+      containerStyle = { marginLeft: 5, marginTop: 14, marginRight: 5}
+      iframeStyle = {width: this.state.winWidth, height: this.state.winHeight+220}
+    }
     let src = "/" + this.state.locale + "/eventintro/" + this.state.event
     return (
 <div className="row" 
-  style={{ marginLeft: 35, marginTop: 14, marginRight: 35, position: "fixed"}}>
+  style={containerStyle}>
   <ul className="nav nav-pills">
-    <li className="active"><a href="#">Introduction</a></li>
-    <li onClick={this.goToScreen.bind(this, 'gallery')}><a href="#">Visual Gallery</a></li>
-    <li className="pull-right" onClick={this.goToScreen.bind(this, 'timeline')}><a href="#">Close</a></li>
+    <li className="active"><a href="#">{this.state.titleIntro}</a></li>
+    <li onClick={this.goToScreen.bind(this, 'gallery')}><a href="#">{this.state.titleGallery}</a></li>
+    <li className="pull-right" onClick={this.goToScreen.bind(this, 'timeline')}><a href="#">{this.state.titleClose}</a></li>
   </ul>
   <hr/>
-  <iframe style={{width: this.state.winWidth-50, height: this.state.winHeight-220}} src={src} frameBorder="0"/>
+  <iframe style={iframeStyle} src={src} frameBorder="0"/>
 </div>
     )
   }
@@ -251,8 +284,8 @@ class Gallery extends React.Component{
       <div className="row sticky-active" id="sidebar" data-plugin-sticky="" 
         style={{width: this.state.winWidth/2-50, left: 50, top: 110, position: "fixed"}}>
         <ul className="nav nav-pills">
-          <li className="active"><a href="#">Introduction</a></li>
-          <li onClick={this.goToScreen.bind(this, 'gallery')}><a href="#">Visual Gallery</a></li>
+          <li className="active"><a href="#">{this.state.titleIntro}</a></li>
+          <li onClick={this.goToScreen.bind(this, 'gallery')}><a href="#">{this.state.titleGallery}</a></li>
         </ul>
         <hr/>
         <iframe style={{width: this.state.winWidth/2-50, height: this.state.winHeight-220}} src={src} frameBorder="0"/>
@@ -277,14 +310,15 @@ class Gallery extends React.Component{
   }
 
   renderMobileScreen() {
-    return(
-<div>
-  {this.state.isShowGallery && this.renderGallery()}
-  {(!this.state.isShowGallery && this.state.isShowIntro) &&  this.renderIntro()}
-  {(!this.state.isShowGallery && !this.state.isShowIntro && this.state.isShowVisualData) &&  this.renderVisualData()}
-  {(!this.state.isShowGallery && !this.state.isShowIntro && !this.state.isShowVisualData) &&  this.renderTimeline()}
-</div>
-    )
+    if (this.state.isShowGallery) {
+      return this.renderGallery()
+    } else if (this.state.isShowVisualData) {
+      return this.renderVisualData()
+    } else if (this.state.isShowIntro) {
+      return this.renderIntro()
+    } else {
+      return this.renderTimeline()
+    }
   }
 
   render() {
