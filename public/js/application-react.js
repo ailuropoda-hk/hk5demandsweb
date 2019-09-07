@@ -3,7 +3,6 @@ class GlobalStore {
     this.datasetToObject = this.datasetToObject.bind(this);
   }
 
-
   datasetToObject (elem) {
     var data = {};
     [].forEach.call(elem.attributes, function(attr) {
