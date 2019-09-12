@@ -14,7 +14,6 @@ var getLocale = function(locale) {
   }
 }
 
-
 fetchServer = function (url, method, bodydata) {
   return new Promise((resolve, reject) => {
     let fetch_func

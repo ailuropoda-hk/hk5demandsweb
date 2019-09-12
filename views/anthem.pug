@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  .body
+    include ./header.pug
+    .main
+      #anthem
+    script(src='/vendor/porto/js/theme.js')
+    script(src='/vendor/porto/js/custom.js')
+    script(src='/vendor/porto/js/theme.init.js')
+    script(type="text/babel" src="/js/anthem.js")
+    script(src='https://www.youtube.com/iframe_api')

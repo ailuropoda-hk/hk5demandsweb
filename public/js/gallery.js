@@ -121,16 +121,25 @@ class Gallery extends React.Component{
     
     for (let i=0; i<this.state.visualdata.length; i++) {
       let item = this.state.visualdata[i]
+      let itemdom
+      if (item.thumbnail == "") {
+        itemdom = <iframe src={item.embedded} frameBorder="0"/>
+      } else {
+        itemdom = <img src={item.thumbnail} className="img-responsive" alt={item.embedded} /> 
+      }
+
       galleryList.push(
-<span onClick={this.clickVisualData.bind(this, i)} className="col-md-3 thumb-info thumb-info-centered-info ">
-  <span className="thumb-info-wrapper">
-    <img src={item.thumbnail} className="img-responsive" alt=""/>
-    <span className="thumb-info-title">
-      <span className="thumb-info-inner">{item.title}</span>
-      <span className="thumb-info-type">{item.desc}</span>
+<li className="col-md-3 isotope-item" onClick={this.clickVisualData.bind(this, i)} > 
+  <span className="thumb-info thumb-info-centered-info">
+    <span className="thumb-info-wrapper">
+      {itemdom}
+      <span className="thumb-info-title">
+        <span className="thumb-info-inner">{item.title}</span>
+        {(item.desc != "") && <span className="thumb-info-type">{item.desc}</span>}
+      </span>
     </span>
   </span>
-</span>
+</li>
       )
     }
 
@@ -143,7 +152,12 @@ class Gallery extends React.Component{
     <li className="pull-right" onClick={this.goToScreen.bind(this, 'timeline')}><a href="#">{this.state.titleClose}</a></li>
   </ul>
   <hr/>
-  {galleryList}
+  <div className="row">
+    <ul class="portfolio-list">
+      {galleryList}
+    </ul>
+  </div>
+  
 </div>
     )
   }

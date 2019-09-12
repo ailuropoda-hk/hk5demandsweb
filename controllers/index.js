@@ -9,11 +9,20 @@ router.get('/', async function(req, res, next) {
   res.redirect('/zh-Hant')
 })
 
+router.get('/anthem', async function(req, res, next) {
+  res.render('anthem')
+})
+
 router.get('/testpage', async function(req, res, next) {
   res.render('testpage')
 })
 
-
+router.get('/ts', async function(req, res, next) {
+  let ts = Math.round((new Date().getTime())/1000)
+  // console.log(d)
+  res.setHeader('Content-Type', 'application/json')
+  res.status(200).send({ ts: ts})
+})
 router.get('/:locale', async function(req, res, next) {
   let locale = commonModule.getLocale(req.params.locale)
   res.render('index', { locale: locale , 
@@ -70,6 +79,7 @@ router.get('/:locale/gallery', async function(req, res, next) {
   let events = dataModule.events[locale]
   res.render('gallery', { locale: locale, events: events })
 })
+
 
 
 module.exports = router;
