@@ -1,58 +1,405 @@
 - event: 213extradition
   date: 2019-02-13
+  major: True
   title:
-    - name: 修例開始
+    - content: 修例開始
       locale: zh-Hant
   desc:
-    - name: 政府宣布修訂《逃犯條例》和《刑事事宜 相互法律協助條例》
+    - content: 政府宣布修訂《逃犯條例》和《刑事事宜 相互法律協助條例》
       locale: zh-Hant
 - event: 331rally
   date: 2019-03-31
+  major: False
   title:
-    - name: 首次反條例大遊行
+    - content: 首次反條例大遊行
       locale: zh-Hant
   desc:
-    - name: 民間人權陣線發起反對《逃犯條例》修訂草案的首場遊行，大會統計共有1.2萬人參與。
+    - content: 民間人權陣線發起反對《逃犯條例》修訂草案的首場遊行，大會統計共有1.2萬人參與。
       locale: zh-Hant
 - event: 428rally
   date: 2019-04-28
+  major: False
   title:
-    - name: 第二次反條例大遊行
+    - content: 第二次反條例大遊行
       locale: zh-Hant
   desc:
-    - name: 民間人權陣線第二次發起反對修訂草案的遊行，民間人權陣線稱有13萬人參加，創下2014年雨傘革命以來的民主派遊行紀錄。
+    - content: 民間人權陣線第二次發起反對修訂草案的遊行，民間人權陣線稱有13萬人參加，創下2014年雨傘革命以來的民主派遊行紀錄。
       locale: zh-Hant
 - event: 520legco
   date: 2019-05-20
+  major: False
   title:
-    - name: 政府要求立法會6.12直接二讀
+    - content: 政府要求立法會6.12直接二讀
       locale: zh-Hant
   desc:
-    - name: 政府為求盡快通過修例，要求以建制派為主的立法會繞過法案委員會，在六月十二日直上大會審議修例。
+    - content: 政府為求盡快通過修例，要求以建制派為主的立法會繞過法案委員會，在六月十二日直上大會審議修例。
       locale: zh-Hant
 - event: 606lawrally
   date: 2019-06-06
+  major: False
   title:
-    - name: 法律界黑衣遊行
+    - content: 法律界黑衣遊行
       locale: zh-Hant
   desc:
-    - name: 法律界人士發起黑衣遊行，抗議修訂草案。發起遊行的法律界立法會議員郭榮鏗表明：「法律界不會向政府低頭。」
+    - content: 法律界人士發起黑衣遊行，抗議修訂草案。發起遊行的法律界立法會議員郭榮鏗表明：「法律界不會向政府低頭。」
       locale: zh-Hant
 - event: 609rally
   date: 2019-06-09
+  major: True
   title:
-    - name: 民間人權陣線1,030,000人大遊行
+    - content: 民間人權陣線1,030,000人大遊行
       locale: zh-Hant
   desc:
-    - name: 民間人權陣線再度發起示威遊行，抗議修訂草案參加，參加人數達103萬人。人潮導致最少5個港鐵車站實施管制措施，其後警員與抗議者曾爆發衝突。隔日，林鄭月娥拒絕就修訂草案讓步。
+    - content: 民間人權陣線再度發起示威遊行，抗議修訂草案參加，參加人數達103萬人。人潮導致最少5個港鐵車站實施管制措施，其後警員與抗議者曾爆發衝突。隔日，林鄭月娥拒絕就修訂草案讓步。
       locale: zh-Hant
 - event: 612strke
   date: 2019-06-12
+  major: True
   title:
-    - name: 全港大罷工反修例，其後警方武力清場
+    - content: 全港大罷工反修例，其後警方武力清場
       locale: zh-Hant
   desc:
-    - name: 民間人權陣線協同眾民主派議員，發起大罷工並於立法會外集會抗議修例。立法會預定當天恢復修訂草案的二讀審議，大量示威者圍堵、佔領金鐘立法會綜合大樓周邊道路抗議，高峰時逾4萬人參與。其後引發暴力衝突，警方動用催淚彈、橡膠子彈武力清場。
+    - content: 民間人權陣線協同眾民主派議員，發起大罷工並於立法會外集會抗議修例。立法會預定當天恢復修訂草案的二讀審議，大量示威者圍堵、佔領金鐘立法會綜合大樓周邊道路抗議，高峰時逾4萬人參與。其後引發暴力衝突，警方動用催淚彈、橡膠子彈武力清場。
       locale: zh-Hant
-
-      
+- event: 614assembly
+  date: 2019-06-14
+  major: False
+  title:
+    - content: 香港媽媽反送中集氣大會
+      locale: zh-Hant
+  desc:
+    - content: 如果你地既細路，俾我一棍一棍毆落去，你咃有咩感覺呢？
+      locale: zh-Hant
+- event: 615suspend
+  date: 2019-06-15
+  major: False
+  title:
+    - content: 修例暫緩
+      locale: zh-Hant
+  desc:
+    - content: 政府宣布修例暫緩。立法會議事規則內沒有「暫緩」，只有「押後」（POSTPONE）或「撒回」（WITHDRAW）
+      locale: zh-Hant
+- event: 615lifeloss
+  date: 2019-06-15
+  major: True
+  title:
+    - content: 失去義士
+      locale: zh-Hant
+  desc:
+    - content: 反送中人士以死相諫，抗議反送中，黃衣男遂樓身亡。
+      locale: zh-Hant
+- event: 616rally
+  date: 2019-06-16
+  major: True
+  title:
+    - content: 2,000,001人大遊行
+      locale: zh-Hant
+  desc:
+    - content: 2,000,000 + 1人反送中大遊行。沒有暴徒，只有暴政。
+      locale: zh-Hant
+- event: 621surroundpohead
+  date: 2019-06-21
+  major: True
+  title:
+    - content: 包圍警察總部
+      locale: zh-Hant
+  desc:
+    - content: 你地擺明作贼心虚，所以膊頭冇冧巴
+      locale: zh-Hant
+- event: 626g20
+  date: 2019-06-26
+  major: True
+  title:
+    - content: G20 香港人眾籌全球登報
+      locale: zh-Hant
+  desc:
+    - content: 11小時內籌得670萬港元
+      locale: zh-Hant
+- event: 629lifeloss
+  date: 2019-06-29
+  major: True
+  title:
+    - content: 失去義士
+      locale: zh-Hant
+  desc:
+    - content: 失去義士
+      locale: zh-Hant
+- event: 630lifeloss
+  date: 2019-06-30
+  major: True
+  title:
+    - content: 失去義士
+      locale: zh-Hant
+  desc:
+    - content: 失去義士
+      locale: zh-Hant
+- event: 701legco
+  date: 2019-07-01
+  major: True
+  title:
+    - content: 衝擊立法會
+      locale: zh-Hant
+  desc:
+    - content: 要走就一齊走！佢咃唔走，我咃都唔會走！
+      locale: zh-Hant
+- event: 703lifeloss
+  date: 2019-07-03
+  major: True
+  title:
+    - content: 失去義士
+      locale: zh-Hant
+  desc:
+    - content: 失去義士
+      locale: zh-Hant
+- event: 706revivetm
+  date: 2019-07-06
+  major: False
+  title:
+    - content: 光復屯門
+      locale: zh-Hant
+  desc:
+    - content: 數十名警員保護一名大媽離開
+      locale: zh-Hant
+- event: 707kwrally
+  date: 2019-07-07
+  major: True
+  title:
+    - content: 九龍大遊行
+      locale: zh-Hant
+  desc:
+    - content: 九龍區大遊行逾二十三萬人參與，港警包抄清場，拒展示委任證，挑釁市民。
+      locale: zh-Hant
+- event: 709billdead
+  date: 2019-07-09
+  major: False
+  title:
+    - content: 林鄭月娥：修例壽終正寢
+      locale: zh-Hant
+  desc:
+    - content: 林鄭月娥表示修例相關工作「完全失敗」，修例建議目前已經「壽終正寢」，她用英文重覆時用了修例「已死」的說法，但拒絕使用「撤回」的字眼。
+      locale: zh-Hant
+- event: 714strally
+  date: 2019-07-14
+  major: False
+  title:
+    - content: 沙田區遊行
+      locale: zh-Hant
+  desc:
+    - content: 11.5 萬人沙田遊行，警民沙燕橋隔空對峙。
+      locale: zh-Hant
+- event: 714ntp
+  date: 2019-07-14
+  major: True
+  title:
+    - content: 警方闖入新城市廣場武力清場
+      locale: zh-Hant
+  desc:
+    - content: 沙田遊行後，警方進入新城市廣場武力清場，與民爆發大規模衝突。
+      locale: zh-Hant
+- event: 717elderlyrally
+  date: 2019-07-17
+  major: False
+  title:
+    - content: 銀髮族遊行
+      locale: zh-Hant
+  desc:
+    - content: 九千多名香港銀髮族上街「支持青年，守護香港」
+      locale: zh-Hant
+- event: 721rally
+  date: 2019-07-21
+  major: True
+  title:
+    - content: 第六次反送中大遊行
+      locale: zh-Hant
+  desc:
+    - content: 43萬人參加民陣遊行，呼籲香港政府應就反送中期間的衝突事件，成立獨立調查委員會。
+      locale: zh-Hant
+- event: 721liaison
+  date: 2019-07-17
+  major: False
+  title:
+    - content: 中聯辦外抗議
+      locale: zh-Hant
+  desc:
+    - content: 市民於遊行結束後到中聯辦外抗議，警方發射55枚催淚彈、24枚海綿彈、5發橡膠子彈武力清場。
+      locale: zh-Hant
+- event: 721yuenlong
+  date: 2019-07-21
+  major: True
+  title:
+    - content: 元朗黑夜
+      locale: zh-Hant
+  desc:
+    - content: 多名白衣男子在元朗西鐵站手持木棒追打市民，在車站內多人倒下。警方於接報後39分鐘到達現場，並沒有對白衣男子作出拘捕行動。
+      locale: zh-Hant
+- event: 722lifeloss
+  date: 2019-07-22
+  major: True
+  title:
+    - content: 失去義士
+      locale: zh-Hant
+  desc:
+    - content: 失去義士
+      locale: zh-Hant
+- event: 726airport
+  date: 2019-07-26
+  major: True
+  title:
+    - content: 「和你飛」機場萬人接機集會
+      locale: zh-Hant
+  desc:
+    - content: 反修例運動首次機場集會，大會指大約有1.5萬人參與。
+      locale: zh-Hant
+- event: 727ylrally
+  date: 2019-07-27
+  major: False
+  title:
+    - content: 元朗反警黑勾結遊行
+      locale: zh-Hant
+  desc:
+    - content: 警方“公共安全”爲由，對是次遊行發出反對通知書，但仍有大批市民為抗議 7.21 元朗警黑勾結於元朗集結。
+      locale: zh-Hant
+- event: 728rally
+  date: 2019-07-28
+  major: False
+  title:
+    - content: 追究 7.21 上環開槍遊行
+      locale: zh-Hant
+  desc:
+    - content: 警方4小時內發射過百枚催淚彈、海綿彈及橡膠子彈。拘捕49人，44人被控暴動罪，1人被控襲警。
+      locale: zh-Hant
+- event: 730protest
+  date: 2019-07-30
+  major: False
+  title:
+    - content: 7.30 各區發生警民衝突
+      locale: zh-Hant
+  desc:
+    - content: 市民於葵涌聲援被捕人士，警署警長兩度向示威者及街坊舉起雷明登霰彈槍。有人在天水圍警署外向聲援人士發射近十枚煙花。
+      locale: zh-Hant
+- event: 801assembly
+  date: 2019-08-01
+  major: False
+  title:
+    - content: 金融業快閃集會
+      locale: zh-Hant
+  desc:
+    - content: 金融界快閃集會，千人冒雨逼爆遮打花園。
+      locale: zh-Hant
+- event: 802medical
+  date: 2019-08-02
+  major: True
+  title:
+    - content: 醫護專職集會
+      locale: zh-Hant
+  desc:
+    - content: 醫護專職界抗議醫管局漠視病人私隱、政府默許警方濫捕、警方妨礙現場救援，記者及市民生命安全受威脅。
+      locale: zh-Hant
+- event: 802civilservant
+  date: 2019-08-02
+  major: True
+  title:
+    - content: 公務員「公僕仝人，與民同行」集會
+      locale: zh-Hant
+  desc:
+    - content: 4萬人冒雨出席。王永平：「《公務員守則》又係我寫的，第一條就係維護法治，法治超越特首。」
+      locale: zh-Hant
+- event: 803protest
+  date: 2019-08-03
+  major: True
+  title:
+    - content: 旺角遊行、多區發生警民衝突
+      locale: zh-Hant
+  desc:
+    - content: 旺角遊行，警方於旺角、尖沙咀、多區施放催淚彈。警方於黃大仙站內無理拘捕年青人，黃大仙街坊與警方對峙。
+      locale: zh-Hant
+- event: 804protest
+  date: 2019-08-04
+  major: True
+  title:
+    - content: 將軍澳港島西遊行、多區發生警民衝突
+      locale: zh-Hant
+  desc:
+    - content: 西環・銅鑼灣警方於10分鐘內連發60枚催淚彈，有居民及小童吸入後不適。天水圍女示威者遭男性警員制伏抬走，持續走光。
+      locale: zh-Hant
+- event: 805strike
+  date: 2019-08-05
+  major: True
+  title:
+    - content: 全港大罷工、七區大集會
+      locale: zh-Hant
+  desc:
+    - content: 全港三罷，沙田、荃灣、屯門、黃大仙、大埔、旺角、金鐘集會。工會推算全港的罷工人數共約35萬人，而參與集會的人數約29萬人。
+      locale: zh-Hant
+- event: 806ssp
+  date: 2019-08-06
+  major: False
+  title:
+    - content: 深水埗衝突
+      locale: zh-Hant
+  desc:
+    - content: 浸大學生會會長方仲賢買觀星筆被捕，深水埗街坊到警署聲援，要求放人。
+      locale: zh-Hant
+- event: 807lawrally
+  date: 2019-08-07
+  major: False
+  title:
+    - content: 法律界二度黑衣遊行
+      locale: zh-Hant
+  desc:
+    - content: 法律界將於8月7日舉行黑衣遊行，促請政府就「反送中」運動設立獨立調查，終點為律政中心，同時促請律政司保持獨立，不可作政治檢控。
+      locale: zh-Hant
+- event: 809airport
+  date: 2019-08-09
+  major: True
+  title:
+    - content: 香港機場「和你飛」集會
+      locale: zh-Hant
+  desc:
+    - content: 網民發起一連三日（9至11日）在香港國際機場客運大樓舉行「和你飛」集會，繼續和理非反送中抗爭。雖然活動未獲批不反對通知書，但參與人數依然眾多。
+      locale: zh-Hant
+- event: 810protest
+  date: 2019-08-10
+  major: False
+  title:
+    - content: 8.10 多區發生警民衝突
+      locale: zh-Hant
+  desc:
+    - content: 尖沙咀、大圍、大埔等多區發生警民衝突。
+      locale: zh-Hant
+- event: 811tst
+  date: 2019-08-11
+  major: True
+  title:
+    - content: 警方向女示威者頭部開槍，導致永久失明及毀容
+      locale: zh-Hant
+  desc:
+    - content: 警方用布袋彈向頭部開槍，打穿眼罩，女救護員右眼球爆裂，頜骨全碎，將永久失明及毀容。
+      locale: zh-Hant
+- event: 811tk
+  date: 2019-08-11
+  major: True
+  title:
+    - content: 警方追入太古港鐵站內，近距離掃射示威者
+      locale: zh-Hant
+  desc:
+    - content: 警方1米內行刑式掃射示威者，於港鐵電梯追打及推跌示威者及途人，險釀人踩人慘劇。
+      locale: zh-Hant
+- event: 811kf
+  date: 2019-08-11
+  major: True
+  title:
+    - content: 警方於葵芳站內發射多枚催淚彈
+      locale: zh-Hant
+  desc:
+    - content: 警方於室內空間發射催淚彈，有違國際準則，等同製造毒氣室，草菅人命。警方其後更一度否認發射催淚彈，大話連篇。
+      locale: zh-Hant
+- event: 811protest
+  date: 2019-08-11
+  major: True
+  title:
+    - content: 多區發生警民衝突，警方行動中喬裝示威者
+      locale: zh-Hant
+  desc:
+    - content: 多區於8·11發生警民衝突，傳媒發現警察於示威活動中喬裝示威者，警方未就喬裝警員的角色作正面回應。
+      locale: zh-Hant

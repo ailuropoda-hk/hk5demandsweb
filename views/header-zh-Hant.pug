@@ -15,53 +15,92 @@ header#header.header-narrow
                 nav
                   ul#mainNav.nav.nav-pills
                     li
-                      a(href="/") 我可以做什麼
+                      .input-group
+                        input#q.form-control(type='text' name='q' placeholder='搜尋(待處理)...' required='')
+                        span.input-group-btn
+                          button.btn.btn-default(type='submit')
+                            i.fa.fa-search
                     li
-                      a(href="/") 人道支援機構
+                      a(href="/") 我可以做什麼 (待處理)
+                    li.dropdown
+                      a(href="/zh-Hant/gallery").dropdown-toggle 資料庫
+                      ul.dropdown-menu
+                        li
+                          a(href="/zh-Hant/mgallery") 主要事件
+                        li
+                          a(href="/zh-Hant/gallery") 全部事件
+                        br
+                        li
+                          a(href="/zh-Hant/gallerycat") 全部分類
+                        li
+                          a(href="/zh-Hant/gallerycat?cat=motivate") 感動及振奮人心
+                        li.dropdown-submenu
+                          a.dropdown-submenu 警暴
+                          ul.dropdown-menu
+                            li
+                              a(href="/zh-Hant/gallerycat?cat=poabuse") 警察濫權
+                            li
+                              a(href="/zh-Hant/gallerycat?cat=poviolent") 警察濫用武力
+                            li
+                              a(href="/zh-Hant/gallerycat?cat=pounlawful") 警察涉嫌違法
+                            li
+                              a(href="/zh-Hant/gallerycat?cat=overarrest") 濫捕市民
+                            li
+                              a(href="/zh-Hant/gallerycat?cat=potriad") 警黑合作
+                            li
+                              a(href="/zh-Hant/gallerycat?cat=attackpress") 攻擊傳媒
+                        li.dropdown-submenu
+                          a.dropdown-submenu 抗爭運動
+                          ul.dropdown-menu
+                            li
+                              a(href="/zh-Hant/gallerycat?cat=rally") 遊行
+                            li
+                              a(href="/zh-Hant/gallerycat?cat=assembly") 集會
+                            li
+                              a(href="/zh-Hant/gallerycat?cat=strike") 罷工
+                            li
+                              a(href="/zh-Hant/gallerycat?cat=movement") 其他抗爭手法
+                        li.dropdown-submenu
+                          a.dropdown-submenu 記者會
+                          ul.dropdown-menu
+                            li
+                              a(href="/zh-Hant/gallerycat?cat=announce-lihkg") 民間記者會
+                            li
+                              a(href="/zh-Hant/gallerycat?cat=announce-demo") 泛民記者會
+                            li
+                              a(href="/zh-Hant/gallerycat?cat=announce-gov") 政府及建制記者會
+                            li
+                              a(href="/zh-Hant/gallerycat?cat=announce-po") 警方記者會
+                        li
+                          a(href="/zh-Hant/gallerycat?cat=editorial") 社評
+                        li
+                          a(href="/zh-Hant/gallerycat?cat=posupport") 撐警謬論
                     li
-                      a(href="/") 搜尋
-                    li
-                      a(href="/zh-Hant/gallery") 資料庫
-                    //- li.dropdown
-                    //-   a.dropdown-toggle(href="/zh-Hant/gallery") 資料庫
-                    //-   ul.dropdown-menu
-                    //-     li.dropdown-submenu
-                    //-       a(href="/") 集會
-                    //-       ul.dropdown-menu
-                    //-         li
-                    //-           a(href="/zh-Hant/mapevent?event=818vpark") 818 維園集會
-                    //-     li.dropdown-submenu
-                    //-       a 遊行
-                    //-       ul.dropdown-menu
-                    //-         li
-                    //-           a(href="/zh-Hant/mapevent?event=428rally") 428 遊行
-                    //-         li
-                    //-           a(href="/zh-Hant/mapevent?event=811tst") 811 尖沙咀遊行
-                    //-     li.dropdown-submenu
-                    //-       a.dropdown-submenu(href="/") 罷工
-                    //-       ul.dropdown-menu
-                    //-         li
-                    //-           a(href="/zh-Hant/mapevent?event=805strike") 805 罷工
-                    //-     li.dropdown-submenu
-                    //-       a.dropdown-submenu(href="/") 不合作運動
-                    //-       ul.dropdown-menu
-                    //-         li
-                    //-           a(href="/zh-Hant/mapevent?event=812airport") 812 機場和你塞
-                    //-     li.dropdown-submenu
-                    //-       a.dropdown-submenu 記者會
-                    //-       ul.dropdown-menu
-                    //-         li
-                    //-           a(href="/zh-Hant/mapevent?cat=announce-lihkg") 民間記者會
-                    //-         li
-                    //-           a(href="/zh-Hant/mapevent?cat=announce-demo") 泛民記者會
-                    //-         li
-                    //-           a(href="/zh-Hant/mapevent?cat=announce-gov") 政府及建制記者會
-                    //-         li
-                    //-           a(href="/zh-Hant/mapevent?cat=announce-po") 警方記者會
-                    li
-                      a(href="/") 議會會議紀錄
-                    li
-                      a(href="/") 連結
+                      a(href="/") 議會會議紀錄 (待處理)
+                    li.dropdown
+                      a(href="/").dropdown-toggle 人道支援機構
+                      ul.dropdown-menu
+                        li
+                          a(href="https://www.facebook.com/612Fund/" target="_blank") 612人道支援基金
+                        li
+                          a(href="https://www.facebook.com/sparkalliancehk/" target="_blank") 星火同盟 抗爭支援
+                    li.dropdown
+                      a(href="/").dropdown-toggle 連結
+                      ul.dropdown-menu
+                        li
+                          a(href="https://hkontheroad.org/" target="_blank") 香港反修例運動時序記錄
+                        li
+                          a(href="https://ggisnotworking.github.io/ornot/" target="_blank") 自由篩
+                        li
+                          a(href="https://hkrev.info/" target="_blank") HK DEMOCRATIC MOVEMENT 2019
+                        li
+                          a(href="https://www.tiki-toki.com/timeline/entry/1273579/Hong-Kong-Timeline/" target="_blank") Hong Kong Timeline
+                        li
+                          a(href="https://standwithhk.org/" target="_blank") Fight for Freedom. Stand with Hong Kong.
+                        li
+                          a(href="http://www.hkdreamers.com/" target="_blank") HK DREAMERS
+                        li
+                          a(href="https://recordhk.info/zh-ht/" target="_blank") 2019 反送中示威時序表
                     li.dropdown
                       a(style="background-color: #293339").dropdown-toggle 繁中
                       ul.dropdown-menu

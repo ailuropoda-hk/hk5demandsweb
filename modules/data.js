@@ -7,14 +7,17 @@ var localeList = ["zh-Hant", "zh-Hans", "en"]
 var defaultLocale = "zh-Hant"
 var dashboardslides = yaml.safeLoad(fs.readFileSync('./data/dashboardslide.yaml', 'utf8'))
 var events = {}
+var majorevents = {}
 
 var loadEvents = async function() {
   for (let locale of localeList) {
     events[locale] = []
+    majorevents[locale] = []
   }
   let eventyaml = yaml.safeLoad(fs.readFileSync('./data/event.yaml', 'utf8'))
   for (let locale of localeList) {
     events[locale] = []
+    majorevents[locale] = []
   }
   for (let item of eventyaml) {
     for (let locale of localeList) {
@@ -29,10 +32,17 @@ var loadEvents = async function() {
       events[locale].push({
         event: item.event,
         date: item.date,
-        title: title.name,
-        desc: desc.name,
+        title: title.content,
+        desc: desc.content,
       })
-
+      if (item.major) {
+        majorevents[locale].push({
+          event: item.event,
+          date: item.date,
+          title: title.content,
+          desc: desc.content,
+        })
+      }
     }
   }
 }
@@ -43,4 +53,5 @@ loadEvents()
 module.exports = {
   dashboardslides: dashboardslides,
   events: events,
+  majorevents: majorevents,
 }

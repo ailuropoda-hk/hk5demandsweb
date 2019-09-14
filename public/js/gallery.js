@@ -31,9 +31,11 @@ class Gallery extends React.Component{
       titleIntro: titleIntro,
       winHeight: window.innerHeight,
       winWidth: window.innerWidth,
+      pageYOffset: 0,
     }
 
     this.updateDimensions = this.updateDimensions.bind(this)
+    this.onScroll = this.onScroll.bind(this)
     this.fetchVisualData = this.fetchVisualData.bind(this)
     this.clickVisualData = this.clickVisualData.bind(this)
     this.clickEvent = this.clickEvent.bind(this)
@@ -45,8 +47,9 @@ class Gallery extends React.Component{
   }
 
   componentDidMount() {
-    this.fetchVisualData()
+    this.fetchVisualData(this.state.events[0].event)
     window.addEventListener("resize", this.updateDimensions)
+    window.addEventListener('scroll', this.onScroll)
   }
 
   componentWillUnmount() {
@@ -65,9 +68,22 @@ class Gallery extends React.Component{
     }
   }
 
-  fetchVisualData() {
-    let urlPath = '/' + this.state.locale + '/event?event=' + this.state.event
-    urlPath = '/' + this.state.locale + '/event'
+  onScroll() {
+    if (this.state.isShowGallery) {
+      return
+    }
+    if (!this.state.isShowBoth && this.state.isShowIntro) {
+
+      return
+    }
+    // console.log("Set", window.pageYOffset)
+    this.setState({pageYOffset: window.pageYOffset})
+  }
+
+  fetchVisualData(event) {
+    let urlPath = '/' + this.state.locale + '/event?event=' + event
+    // console.log("fetch url", urlPath)
+    // urlPath = '/' + this.state.locale + '/event'
     fetchServer(urlPath, 'GET', {}).then((res) => {
       if (res.data.visualdata) {
         this.setState({visualdata: res.data.visualdata})
@@ -89,6 +105,13 @@ class Gallery extends React.Component{
   }
 
   clickEvent(idx) {
+    
+    // console.log(window.pageYOffset)
+    // window.scrollTo(0,100)
+    // const node = ReactDOM.findDOMNode(this)
+    // node.scrollTop = 0
+    // window.pageYOffset = 0
+    this.fetchVisualData(this.state.events[idx].event)
     this.setState({event: this.state.events[idx].event}, 
       this.goToScreen('intro'))
   }
@@ -205,7 +228,11 @@ class Gallery extends React.Component{
 </article>
       )
     }
-
+    // console.log("RenderTimeLine", this.state.pageYOffset)
+    setTimeout(()=>(
+      window.scrollTo(0, this.state.pageYOffset)
+    ), 300)
+    
     return(
 <div className="blog-posts">
   <section className="timeline" style={{width: "100%", marginLeft: 0}}>
@@ -240,11 +267,11 @@ class Gallery extends React.Component{
   style={{ marginLeft: 35, marginTop: 14, marginRight: 35, width: this.state.winWidth-50, position: "fixed"}}>
   <ul className="nav nav-pills">
     { (idx > 0) && (
-      <li className="active" onClick={this.clickVisualData.bind(this, idx-1)}><a href="#">{this.state.visualdata[idx-1].title}</a></li>
+      <li className="active" onClick={this.clickVisualData.bind(this, idx-1)}><a href="#">{"< " + this.state.visualdata[idx-1].title}</a></li>
     )}
     <li className="pull-right" onClick={this.goToScreen.bind(this, 'gallery')}><a href="#">{this.state.titleClose}</a></li>
     { (idx < this.state.visualdata.length - 1) && (
-      <li className="active pull-right"  onClick={this.clickVisualData.bind(this, idx+1)}><a href="#">{this.state.visualdata[idx+1].title}</a></li>
+      <li className="active pull-right"  onClick={this.clickVisualData.bind(this, idx+1)}><a href="#">{this.state.visualdata[idx+1].title + " >"}</a></li>
     )}
   </ul>
   <hr/>
@@ -329,6 +356,7 @@ class Gallery extends React.Component{
     } else if (this.state.isShowVisualData) {
       return this.renderVisualData()
     } else if (this.state.isShowIntro) {
+      window.scrollTo(0, 0)
       return this.renderIntro()
     } else {
       return this.renderTimeline()

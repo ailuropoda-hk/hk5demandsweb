@@ -15,53 +15,92 @@ header#header.header-narrow
                 nav
                   ul#mainNav.nav.nav-pills
                     li
+                      .input-group
+                        input#q.form-control(type='text' name='q' placeholder='Search (processing)...' required='')
+                        span.input-group-btn
+                          button.btn.btn-default(type='submit')
+                            i.fa.fa-search
+                    li
                       a(href="/") What I Can Do?
-                    li
-                      a(href="/") Humanity Support Hroups
-                    li
-                      a(href="/") Query
-                    li
-                      a(href="/zh-Hant/gallery") Gallery
-                    //- li.dropdown
-                    //-   a.dropdown-toggle(href="/zh-Hant/gallery") Gallery
-                    //-   ul.dropdown-menu
-                    //-     li.dropdown-submenu
-                    //-       a(href="/") 集會
-                    //-       ul.dropdown-menu
-                    //-         li
-                    //-           a(href="/zh-Hant/mapevent?event=818vpark") 818 維園集會
-                    //-     li.dropdown-submenu
-                    //-       a 遊行
-                    //-       ul.dropdown-menu
-                    //-         li
-                    //-           a(href="/zh-Hant/mapevent?event=428rally") 428 遊行
-                    //-         li
-                    //-           a(href="/zh-Hant/mapevent?event=811tst") 811 尖沙咀遊行
-                    //-     li.dropdown-submenu
-                    //-       a.dropdown-submenu(href="/") 罷工
-                    //-       ul.dropdown-menu
-                    //-         li
-                    //-           a(href="/zh-Hant/mapevent?event=805strike") 805 罷工
-                    //-     li.dropdown-submenu
-                    //-       a.dropdown-submenu(href="/") 不合作運動
-                    //-       ul.dropdown-menu
-                    //-         li
-                    //-           a(href="/zh-Hant/mapevent?event=812airport") 812 機場和你塞
-                    //-     li.dropdown-submenu
-                    //-       a.dropdown-submenu 記者會
-                    //-       ul.dropdown-menu
-                    //-         li
-                    //-           a(href="/zh-Hant/mapevent?cat=announce-lihkg") 民間記者會
-                    //-         li
-                    //-           a(href="/zh-Hant/mapevent?cat=announce-demo") 泛民記者會
-                    //-         li
-                    //-           a(href="/zh-Hant/mapevent?cat=announce-gov") 政府及建制記者會
-                    //-         li
-                    //-           a(href="/zh-Hant/mapevent?cat=announce-po") 警方記者會
+                    li.dropdown
+                      a(href="/en/gallery").dropdown-toggle Gallery
+                      ul.dropdown-menu
+                        li
+                          a(href="/en/mgallery") Major Events
+                        li
+                          a(href="/en/gallery") All Events
+                        br
+                        li
+                          a(href="/en/gallerycat") All Category
+                        li
+                          a(href="/en/gallerycat?cat=motivate") Motivated
+                        li.dropdown-submenu
+                          a.dropdown-submenu Police Misconduct
+                          ul.dropdown-menu
+                            li
+                              a(href="/en/gallerycat?cat=poabuse") Abuse of Power
+                            li
+                              a(href="/en/gallerycat?cat=poviolent") Police Violence
+                            li
+                              a(href="/en/gallerycat?cat=pounlawful") Unlawful
+                            li
+                              a(href="/en/gallerycat?cat=overarrest") Overarrest
+                            li
+                              a(href="/en/gallerycat?cat=potriad") Triad
+                            li
+                              a(href="/en/gallerycat?cat=attackpress") Attack Press
+                        li.dropdown-submenu
+                          a.dropdown-submenu Movement
+                          ul.dropdown-menu
+                            li
+                              a(href="/en/gallerycat?cat=rally") Rally
+                            li
+                              a(href="/en/gallerycat?cat=assembly") Aseembly
+                            li
+                              a(href="/en/gallerycat?cat=strike") Strike
+                            li
+                              a(href="/en/gallerycat?cat=movement") Others
+                        li.dropdown-submenu
+                          a.dropdown-submenu Press Conference
+                          ul.dropdown-menu
+                            li
+                              a(href="/en/gallerycat?cat=announce-lihkg") Press Conference of the People
+                            li
+                              a(href="/en/gallerycat?cat=announce-demo") Pro Democracy
+                            li
+                              a(href="/en/gallerycat?cat=announce-gov") Government and Pro-establishment
+                            li
+                              a(href="/en/gallerycat?cat=announce-po") Police Press Conference
+                        li
+                          a(href="/en/gallerycat?cat=editorial") Editorial
+                        li
+                          a(href="/en/gallerycat?cat=posupport") Police Supporter
                     li
                       a(href="/") Council Meeting Records
-                    li
-                      a(href="/") Useful Link
+                    li.dropdown
+                      a(href="/").dropdown-toggle Humanitarian Support Group
+                      ul.dropdown-menu
+                        li
+                          a(href="https://www.facebook.com/612Fund/" target="_blank") 612 Humanitarian Relief Fund
+                        li
+                          a(href="https://www.facebook.com/sparkalliancehk/" target="_blank") Spark Alliance
+                    li.dropdown
+                      a(href="/").dropdown-toggle Links
+                      ul.dropdown-menu
+                        li
+                          a(href="https://hkontheroad.org/" target="_blank") 香港反修例運動時序記錄
+                        li
+                          a(href="https://ggisnotworking.github.io/ornot/" target="_blank") 自由篩
+                        li
+                          a(href="https://hkrev.info/" target="_blank") HK DEMOCRATIC MOVEMENT 2019
+                        li
+                          a(href="https://www.tiki-toki.com/timeline/entry/1273579/Hong-Kong-Timeline/" target="_blank") Hong Kong Timeline
+                        li
+                          a(href="https://standwithhk.org/" target="_blank") Fight for Freedom. Stand with Hong Kong.
+                        li
+                          a(href="http://www.hkdreamers.com/" target="_blank") HK DREAMERS
+                        li
+                          a(href="https://recordhk.info/zh-ht/" target="_blank") 2019 反送中示威時序表
                     li.dropdown
                       a(style="background-color: #293339").dropdown-toggle En
                       ul.dropdown-menu

@@ -62,6 +62,7 @@ router.get('/:locale/event', async function(req, res, next) {
   res.status(200).send({ data: {locale: locale, visualdata: result.data}, status: 'success' })
 })
 
+
 router.get('/:locale/eventintro/:event', async function(req, res, next) {
   let locale = commonModule.getLocale(req.params.locale)
   let path = './views/events/' + req.params.event + '-' + locale + '.pug'
@@ -80,6 +81,19 @@ router.get('/:locale/gallery', async function(req, res, next) {
   res.render('gallery', { locale: locale, events: events })
 })
 
+router.get('/:locale/mgallery', async function(req, res, next) {
+  let locale = commonModule.getLocale(req.params.locale)
+  let events = dataModule.majorevents[locale]
+  res.render('gallery', { locale: locale, events: events })
+})
+
+router.get('/:locale/gallerycat', async function(req, res, next) {
+  let locale = commonModule.getLocale(req.params.locale)
+  console.log("********", req.query.cat)
+  let cat = req.query.cat
+  // let events = dataModule.majorevents[locale]
+  res.render('gallerycat', { locale: locale, cat: cat})
+})
 
 
 module.exports = router;
