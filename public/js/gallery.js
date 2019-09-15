@@ -326,7 +326,7 @@ class Gallery extends React.Component{
         style={{width: this.state.winWidth/2-50, left: 50, top: 110, position: "fixed"}}>
         <ul className="nav nav-pills">
           <li className="active"><a href="#">{this.state.titleIntro}</a></li>
-          <li onClick={this.goToScreen.bind(this, 'gallery')}><a href="#">{this.state.titleGallery}</a></li>
+          <li onClick={this.goToScreen.bind(this, 'gallery')}><a href="#">{this.state.titleGallery} ({this.state.visualdata.length})</a></li>
         </ul>
         <hr/>
         <iframe style={{width: this.state.winWidth/2-50, height: this.state.winHeight-220}} src={src} frameBorder="0"/>

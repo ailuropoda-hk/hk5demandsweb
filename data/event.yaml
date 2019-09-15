@@ -52,7 +52,7 @@
   desc:
     - content: 民間人權陣線再度發起示威遊行，抗議修訂草案參加，參加人數達103萬人。人潮導致最少5個港鐵車站實施管制措施，其後警員與抗議者曾爆發衝突。隔日，林鄭月娥拒絕就修訂草案讓步。
       locale: zh-Hant
-- event: 612strke
+- event: 612strike
   date: 2019-06-12
   major: True
   title:
@@ -402,4 +402,157 @@
       locale: zh-Hant
   desc:
     - content: 多區於8·11發生警民衝突，傳媒發現警察於示威活動中喬裝示威者，警方未就喬裝警員的角色作正面回應。
+      locale: zh-Hant
+- event: 812airport
+  date: 2019-08-12
+  major: False
+  title:
+    - content: 百萬人塞爆機場，聲援8·11受傷及被捕人士
+      locale: zh-Hant
+  desc:
+    - content: 為抗議警方於8·11使用過度武力，大批市民到機場示威，引致至少230航班被取消。
+      locale: zh-Hant
+- event: 818assembly
+  date: 2019-08-18
+  major: True
+  title:
+    - content: 民陣發起維園「流水式」集會
+      locale: zh-Hant
+  desc:
+    - content: 警方禁止8·18遊行，僅就維園集會批不反對通知書。民間人權陣線改為發起維園「流水式」集會，超過170萬人冒雨參加。
+      locale: zh-Hant
+- event: 820poviolent
+  date: 2019-08-20
+  major: False
+  title:
+    - content: 林卓廷揭發警員對被捕老翁「濫用私刑」
+      locale: zh-Hant
+  desc:
+    - content: 民主黨立法會議員林卓廷揭發北區醫院CCTV片段，警員對被捕老翁拳打下體染尿衣蓋面。
+      locale: zh-Hant
+- event: 820attack
+  date: 2019-08-20
+  major: False
+  title:
+    - content: 將軍澳連儂牆持刀傷人，至少3人受傷
+      locale: zh-Hant
+  desc:
+    - content: 刀手將軍澳行人隧道內連儂牆斬傷3男女，其中一名傷者為前信報記者。刀手潛逃內地，下午羅湖返港被捕。
+      locale: zh-Hant
+- event: 821yuenlong
+  date: 2019-08-21
+  major: False
+  title:
+    - content: 千人靜坐抗議7·21警黑合作
+      locale: zh-Hant
+  desc:
+    - content: 7·21元朗襲擊後一個月，警方並未對任何人作出檢控，市民不滿警方不作為，於元朗站內靜坐、默站及舉行放映會。
+      locale: zh-Hant
+- event: 822assembly
+  date: 2019-08-22
+  major: False
+  title:
+    - content: 中學生反條例集會
+      locale: zh-Hant
+  desc:
+    - content: 3千人參與愛丁堡廣場中學生反修例集會，醞釀9月罷課表達五大訴求。
+      locale: zh-Hant
+- event: 823metoo
+  date: 2019-08-23
+  major: False
+  title:
+    - content: 被補女子表示，羈留期間被「裸搜」
+      locale: zh-Hant
+  desc:
+    - content: 被補女子表示羈留期被要求裸體搜身，其間以筆打向她的手及大腿間，門外有十多名男警觀看。
+      locale: zh-Hant
+- event: 823hkway
+  date: 2019-08-23
+  major: True
+  title:
+    - content: 香港之路-21萬人60公里人鏈
+      locale: zh-Hant
+  desc:
+    - content: 效法波羅的海抗爭，香港各區手拖手人鏈，荃灣線、觀塘線、港島線全線連接外，更延長至獅子山。
+      locale: zh-Hant
+- event: 824ktrally
+  date: 2019-08-24
+  major: False
+  title:
+    - content: 「燃點香港·全民覺醒」觀塘大遊行
+      locale: zh-Hant
+  desc:
+    - content: 觀塘大遊行呼籲政府回應五大訴求，以及表達對智慧燈柱背後的監控問題之關注。
+      locale: zh-Hant
+- event: 825tktrally
+  date: 2019-08-25
+  major: True
+  title:
+    - content: 荃葵青遊行，警員拔槍及開實彈示警
+      locale: zh-Hant
+  desc:
+    - content: 數名警員持手槍指向人群及開實彈示警，一名傳道人跪求警員不要開槍，卻被踢倒。其後警方表示該警員表現「英勇」，「推開」跪地男子為「自然反應」。
+      locale: zh-Hant
+- event: 826clam
+  date: 2019-08-26
+  major: False
+  title:
+    - content: 林鄭閉門見青年
+      locale: zh-Hant
+  desc:
+    - content: 閉門會面錄音掲林鄭講大話，拒成立獨立調查委員會原因為「警務處同事抗拒好大」。
+      locale: zh-Hant
+- event: 827g7
+  date: 2019-08-27
+  major: False
+  title:
+    - content: G7峰會 - 七國表示「深切關注」香港局勢
+      locale: zh-Hant
+  desc:
+    - content: 七國重申《中英聯合聲明》的存在及重要性，應落實「一國兩制」讓香港享有高度自治權。
+      locale: zh-Hant
+- event: 828metoo
+  date: 2019-08-28
+  major: False
+  title:
+    - content: 反送中#Metoo集會 「追究警方性暴力 捍衛香港人尊嚴」
+      locale: zh-Hant
+  desc:
+    - content: 「執法為名，凌辱為實」「警方用性暴力作戰爭技倆，剝奪我們的基本權利，無論對於性暴力還是制度暴力，我咃都唔可以退縮!」
+      locale: zh-Hant
+- event: 830arrest
+  date: 2019-08-30
+  major: True
+  title:
+    - content: 830 大搜捕 - 8·31遊行前夕，警方拘捕多名議員及政黨人士
+      locale: zh-Hant
+  desc:
+    - content: 警方於遊行前夕，拘捕譚文豪、區諾軒、黃之鋒、周庭、林朗彥、陳浩天、鄭松泰、劉穎匡、許銳宇、孫曉嵐。法庭檢控主任協會主席去信律政司司長對前8·31故意搜捕眾人的做法不滿。另外8·31遊行前夕，岑子杰、鍾健平、梁金成、鍾翰林遇襲受傷。
+      locale: zh-Hant
+- event: 831assembly
+  date: 2019-08-31
+  major: True
+  title:
+    - content: 基督徒為香港罪人祈禱大遊行
+      locale: zh-Hant
+  desc:
+    - content: 一批「60後」的基督徒，號召「為香港罪人祈禱」大遊行，由修頓球場，沿軒尼詩道遊行至禮賓府。
+      locale: zh-Hant
+- event: 831hkwest
+  date: 2019-08-31
+  major: True
+  title:
+    - content: 遊行後金鐘、銅鑼灣一帶發生警民衝突，行動中再有警員被發現喬裝示威者
+      locale: zh-Hant
+  desc:
+    - content: 金鐘、銅鑼灣中警員再次喬裝示威者，警員身份敗露後維園內開實彈還擊。並有疑似喬裝警員投擲汽油彈。
+      locale: zh-Hant
+- event: 831pedward
+  date: 2019-08-31
+  major: True
+  title:
+    - content: 太子站恐怖襲擊
+      locale: zh-Hant
+  desc:
+    - content: 警方速龍部隊及防暴警察衝入太子站無差別毆打市民，稱整個月台為犯罪現場，不准傳媒進來採訪。警方更向消防表示站內並無傷者，阻止救護員入內。
       locale: zh-Hant
