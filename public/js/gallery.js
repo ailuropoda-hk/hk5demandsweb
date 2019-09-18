@@ -267,11 +267,11 @@ class Gallery extends React.Component{
   style={{ marginLeft: 35, marginTop: 14, marginRight: 35, width: this.state.winWidth-50, position: "fixed"}}>
   <ul className="nav nav-pills">
     { (idx > 0) && (
-      <li className="active" onClick={this.clickVisualData.bind(this, idx-1)}><a href="#">{"< " + this.state.visualdata[idx-1].title}</a></li>
+      <li className="active" onClick={this.clickVisualData.bind(this, idx-1)}><a href="#">{"< " + this.state.visualdata[idx-1].title.substring(0,6) }</a></li>
     )}
     <li className="pull-right" onClick={this.goToScreen.bind(this, 'gallery')}><a href="#">{this.state.titleClose}</a></li>
     { (idx < this.state.visualdata.length - 1) && (
-      <li className="active pull-right"  onClick={this.clickVisualData.bind(this, idx+1)}><a href="#">{this.state.visualdata[idx+1].title + " >"}</a></li>
+      <li className="active pull-right"  onClick={this.clickVisualData.bind(this, idx+1)}><a href="#">{this.state.visualdata[idx+1].title.substring(0,6) + " >"}</a></li>
     )}
   </ul>
   <hr/>

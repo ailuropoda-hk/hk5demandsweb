@@ -2,6 +2,7 @@ private/
 backup/
 bower_components/
 node_modules/
+views/events/
 
 .env
 hk5demandsweb.img
